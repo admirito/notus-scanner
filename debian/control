@@ -1,0 +1,24 @@
+Source: notus-scanner
+Section: net
+Priority: optional
+Maintainer: Mohammad Razavi <mrazavi64@gmail.com>
+Build-Depends: debhelper-compat (= 13), dh-python, pybuild-plugin-pyproject, python3-all, python3-poetry-core
+Standards-Version: 4.6.2
+Homepage: https://community.greenbone.net/
+Vcs-Browser: https://github.com/admirito/notus-openvas
+Vcs-Git: https://github.com/admirito/notus-openvas.git
+Testsuite: autopkgtest-pkg-python
+Rules-Requires-Root: no
+
+Package: notus-scanner
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Recommends: mosquitto
+Description: vulnerability scanner for creating results from local security checks
+ Notus Scanner detects vulnerable products in a system
+ environment. The scanning method is to evaluate internal system
+ information. It does this very fast and even detects currently
+ inactive products because it does not need to interact with each of
+ the products.
+ .
+ This package installs the library for Python 3.
